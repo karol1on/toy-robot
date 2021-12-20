@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class Robot
-  attr_accessor :direction, :position
-
   def initialize; end
 
   def place(position:, direction:)
@@ -41,6 +39,8 @@ class Robot
   end
 
   private
+
+  attr_reader :direction, :position
 
   def robot_placed?
     !position.nil? && !direction.nil?

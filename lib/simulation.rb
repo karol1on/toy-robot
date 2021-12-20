@@ -6,8 +6,6 @@ require_relative 'robot'
 require_relative 'table'
 
 class Simulation
-  attr_accessor :table, :robot
-
   def initialize(table: Table.new(width: 5, height: 5), robot: Robot.new)
     @table = table
     @robot = robot
@@ -26,6 +24,8 @@ class Simulation
   end
 
   private
+
+  attr_reader :table, :robot
 
   def place_robot(params)
     return if params.nil?
