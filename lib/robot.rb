@@ -54,9 +54,4 @@ class Robot
       'south' => { x: 0, y: -1 }
     }
   end
-
-  def reset_position(movement)
-    position.coordinate_x -= movement[:x]
-    position.coordinate_y -= movement[:y]
-  end
 end
